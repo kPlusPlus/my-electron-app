@@ -1,16 +1,27 @@
 {
   "name": "my-electron-app",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Hello World!",
   "main": "main.js",
   "author": "Jane Doe",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^22.1.0"
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "electron": "^22.1.0",
+    "electron-packager": "^17.1.1"
   },
   "scripts": {
-    "start": "electron .",
-    "nategnemte": "electron ."
+    "start": "electron-forge start",
+    "nategnemte": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@electron/asar": "^3.2.3",
+    "electron-builder": "^23.6.0"
   }
-  
 }
